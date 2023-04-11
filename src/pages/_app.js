@@ -1,10 +1,11 @@
 import NavBar from "@/components/NavBar";
 import "@/styles/globals.css";
-import { Montserrat } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Head from "next/head";
 
-const montserrat = Montserrat({
+const roboto = Roboto({
   subsets: ["latin"],
+  weight: "400",
   variable: "--font-mont",
 });
 
@@ -16,7 +17,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`${montserrat.variable} font-mont bg-white w-full min-h-screen`}
+        className={`${roboto.variable} font-mont bg-light w-full min-h-screen`}
       >
         <NavBar />
         <Component {...pageProps} />
