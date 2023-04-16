@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "./Layout";
 import Link from "next/link";
 import { AiFillHeart } from "react-icons/ai";
+import HireMe from "./HireMe";
 
 const Footer = () => {
   return (
@@ -28,6 +29,7 @@ const Footer = () => {
           Say Hello <span className="no-underline">👋🏻</span>{" "}
         </Link>
       </Layout>
+      <HireMe />
     </footer>
   );
 };
