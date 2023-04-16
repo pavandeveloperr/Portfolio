@@ -6,6 +6,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import { RiContactsBookFill } from "react-icons/ri";
+import LightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 
 export default function Home() {
   return (
@@ -59,6 +60,13 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+        <div className="absolute w-24 right-8 bottom-8 inline-block">
+          <Image
+            src={LightBulb}
+            alt="Bulb"
+            className="w-full h-auto md:hidden"
+          />
+        </div>
       </main>
     </>
   );
