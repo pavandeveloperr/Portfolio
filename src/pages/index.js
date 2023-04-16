@@ -4,6 +4,8 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/home-image.png";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
+import { LinkArrow } from "@/components/Icons";
+import { RiContactsBookFill } from "react-icons/ri";
 
 export default function Home() {
   return (
@@ -36,15 +38,14 @@ export default function Home() {
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
-                  href="/Soumya_Sootar.pdf"
+                  href="/Pavan_resume.pdf"
                   target={"_blank"}
-                  className="flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg font-semibold dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:border-light md:p-2 md:px-4 md:text-base"
-                  download={true}
+                  className="flex items-center bg-dark text-light p-2 px-6 rounded-lg text-lg font-semibold dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:border-light"
+                  download={false}
                 >
-                  {/* RESUME <LinkArrow /> */}
+                  RESUME <LinkArrow className={"mb-1 ml-1"} />
                 </Link>
                 <Link
-                  // href={"mailto:soumyaswaroopsootar@gmail.com"}
                   href={
                     "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=soumyawaroopsootar@gmail.com"
                   }
@@ -52,7 +53,7 @@ export default function Home() {
                   className="ml-4 flex items-center bg-dark text-light p-2 rounded-lg text-lg font-semibold dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:border-light md:p-2 md:px-4 md:text-base"
                 >
                   CONTACT
-                  {/* <RiContactsBookFill className="ml-2" /> */}
+                  <RiContactsBookFill className="ml-2" />
                 </Link>
               </div>
             </div>
