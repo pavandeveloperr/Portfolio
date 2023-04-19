@@ -4,6 +4,7 @@ import Head from "next/head";
 import React from "react";
 import profilePic from "../../public/images/profile/profile_pic.png";
 import Image from "next/image";
+import Skills from "@/components/Skills";
 
 const About = () => {
   return (
@@ -49,6 +50,8 @@ const About = () => {
               />
             </div>
           </div>
+
+          <Skills />
         </Layout>
       </main>
     </>
