@@ -35,11 +35,11 @@ const Skills = () => {
         <Skill name="REDUX" x="-30vw" y="0vw" />
         <Skill name="NODE.JS" x="0vw" y="-10vw" />
         <Skill name="JAVASCRIPT" x="25vw" y="20vw" />
-        <Skill name="GITHUB" x="-25vw" y="20vw" />
+        <Skill name="HTML" x="-25vw" y="20vw" />
         <Skill name="EXPRESS.JS" x="0vw" y="-20vw" />
         <Skill name="GIT" x="25vw" y="-10vw" />
         <Skill name="NEXT.JS" x="-22vw" y="-10vw" />
-        <Skill name="VERCEL" x="-25vw" y="10vw" />
+        <Skill name="GITHUB" x="-25vw" y="10vw" />
         <Skill name="MONGODB" x="29vw" y="10vw" />
         <Skill name="NPM" x="-25vw" y="-20vw" />
         <Skill name="JQUERY" x="25vw" y="-20vw" />

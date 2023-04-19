@@ -28,17 +28,17 @@ const Details = ({ type, time, place, info }) => {
 };
 
 const Education = () => {
-  const ref1 = useRef(null);
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: ref1,
+    target: ref,
     offset: ["start end", "center start"],
   });
   return (
     <div classNme="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center pt-40">
+      <h2 className="font-bold text-8xl mb-20 w-full text-center pt-40">
         Education
       </h2>
-      <div ref={ref1} className="w-[75%] mx-auto relative">
+      <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-0 w-[4px] h-[100vh] bg-dark origin-top"
