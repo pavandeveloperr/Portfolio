@@ -6,7 +6,7 @@ import HireMe from "./HireMe";
 
 const Footer = () => {
   return (
-    <footer className="w-full font-medium text-lg border-t-2 border-solit border-dark">
+    <footer className="w-full font-medium text-lg border-t-2 border-solit border-dark dark:text-light dark:border-light">
       <Layout className="py-8 flex items-center justify-between">
         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
         <div className="flex items-center lg:py-2">
