@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 
@@ -19,7 +19,7 @@ const Details = ({ type, time, place, info }) => {
           {type}
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-primaryDark/75 xs:text-sm">
-          {time}|{place}
+          {time} | {place}
         </span>
         <p className="font-medium w-full md:text-sm">{info}</p>
       </motion.div>
@@ -28,22 +28,28 @@ const Details = ({ type, time, place, info }) => {
 };
 
 const Education = () => {
-  const ref = useRef(null);
+  const ref1 = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: ref1,
     offset: ["start end", "center start"],
   });
+  useEffect(() => {
+    console.log("scrollYprogress: ", scrollYProgress);
+  }, [scrollYProgress]);
   return (
-    <div classNme="my-64">
-      <h2 className="font-bold text-8xl mb-20 w-full text-center pt-40">
-        Education
+    <div className="my-64">
+      <h2 className="font-bold text-8xl mt-64 mb-32 w-full text-center md:text-6xl md:mb-16 xs:text-4xl">
+        EDUCATION
       </h2>
-      <div ref={ref} className="w-[75%] mx-auto relative">
+
+      <div ref={ref1} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
+        {/* scrolling  */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-[100vh] bg-dark origin-top"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-primary md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+
+        <ul className="w-full flex flex-col items-start justify-between xs:ml-2">
           <Details
             type="Full Stack Web Development"
             time="July 2022 - Jan 2023"
