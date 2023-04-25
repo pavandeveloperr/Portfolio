@@ -1,12 +1,11 @@
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import Footer from "@/Components/Footer";
+import Navbar from "@/Components/Navbar";
 import "@/styles/globals.css";
-import { Roboto } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Head from "next/head";
 
-const roboto = Roboto({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: "400",
   variable: "--font-mont",
 });
 
@@ -15,12 +14,15 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" type="image/x-icon" />
       </Head>
       <main
-        className={`${roboto.variable} font-mont dark:bg-dark bg-light w-full min-h-screen`}
+        className={`${montserrat.variable} font-mont bg-light w-full dark:bg-dark min-h-screen`}
       >
-        <NavBar />
+        {/* <div className="text-xs absolute top-0 bg-red-700 text-lime-100">
+          THIS PAGE IS BEING BUILDING NOW...GOOD THINGS TAKE TIME.....80% Built⚠️
+        </div> */}
+        <Navbar />
         <Component {...pageProps} />
         <Footer />
       </main>

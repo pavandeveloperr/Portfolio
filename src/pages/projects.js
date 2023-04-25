@@ -1,65 +1,62 @@
-import AnimatedText from "@/components/AnimatedText";
-import { GithubIcon } from "@/components/Icons";
-import Layout from "@/components/Layout";
+import AnimatedText from "@/Components/AnimatedText";
+import { GithubIcon } from "@/Components/Icons";
+import Layout from "@/Components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import project1 from "../../public/images/projects/project1.png";
-import { motion } from "framer-motion";
+import Project1 from "../../public/images/projects/ecomm.png";
+import Project3 from "../../public/images/projects/musicapp.png";
+import Project4 from "../../public/images/projects/youtubebackend.png";
+import Transitions from "@/Components/Transitions";
+import Project2 from "../../public/images/projects/crypto.png";
 
-const FramerImage = motion(Image);
-
-const FeaturedProject = ({ type, title, summary, img, link, github }) => {
+const FeatureProject = ({ type, title, summary, img, github, link }) => {
   return (
-    <article
-      className="w-full flex items-center justify-between rounded-br-2xl
-     rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative dark:bg-dark dark:border-light"
-    >
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light" />
+    <article className="dark:bg-dark dark:border-light w-full flex relative items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-primary xs:-right-3 sm:h-[102%] xs:w-[100%] xs:rounded-[1.5rem]" />
 
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+        className=" w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
-        <FramerImage
+        <Image
           src={img}
           alt={title}
           className="w-full h-auto"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
           priority
           sizes="(max-width: 768px) 100vw,
-        (max-width: 1200px) 50vw,
-        50vw"
+              (max-width: 1200px) 50vw,
+              33vw"
         />
       </Link>
 
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6 ">
+        <span className="text-primary dark:text-primaryDark font-medium text-xl xs:text-base">
           {type}
         </span>
         <Link
           href={link}
           target="_blank"
-          className="hover:underline underline-offset-2"
+          className="hover:underline underline-offset-2 dark:hover:un"
         >
-          <h2 className="my-2 text-left text-4xl font-bold dark:text-light">
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
             {title}
           </h2>
         </Link>
         <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
+            {" "}
             <GithubIcon />
           </Link>
-
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light px-6 text-lg font-semibold p-2 dark:bg-light dark:text-dark"
+            className="ml-4 rounded-lg bg-dark dark:bg-light dark:text-dark text-light p-2 px-6 text-lg font-semibold sm:px-4 sm:text-base "
           >
+            {" "}
             Visit Project
           </Link>
         </div>
@@ -70,104 +67,111 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ type, title, summary, img, github, link }) => {
   return (
-    <article className=" w-full flex relative shadow-2xl items-center flex-col justify-center rounded-2xl border border-solid border-dark bg-light p-6 dark:bg-dark dark:border-light">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light" />
+    <>
+      <article className=" dark:bg-dark dark:border-light w-full flex relative shadow-2xl items-center flex-col justify-center rounded-2xl border border-solid border-dark bg-light p-6 xs:p-4">
+        <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-primaryDark md:-right-2 md:w-[101%] sm:h-[102%] xs:rounded-[1.5rem]" />
 
-      <Link
-        href={link}
-        target="_blank"
-        className="w-full cursor-pointer overflow-hidden rounded-lg"
-      >
-        <FramerImage
-          src={img}
-          alt={title}
-          className="w-full h-auto"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-        />
-      </Link>
-
-      <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary dark:text-primaryDark font-medium text-xl">
-          {type}
-        </span>
         <Link
           href={link}
           target="_blank"
-          className="hover:underline underline-offset-2"
+          className=" w-full cursor-pointer overflow-hidden rounded-lg"
         >
-          <h2 className="my-2 text-left text-3xl font-bold">{title}</h2>
+          <Image src={img} alt={title} className="w-full h-auto" />
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
-        <div className="w-full mt-2 flex items-center justify-between">
-          <Link href={github} target="_blank" className="w-10">
-            <GithubIcon />
-          </Link>
+
+        <div className="w-full flex flex-col items-start justify-between mt-4">
+          <span className="text-primary dark:text-primaryDark font-medium text-xl lg:text-lg md:text-base ">
+            {type}
+          </span>
           <Link
             href={link}
             target="_blank"
-            className="rounded-lg bg-dark text-light px-6 text-md font-semibold p-2 "
+            className="hover:underline underline-offset-2"
           >
-            Visit
+            <h2 className="my-2 w-full dark:text-light text-left text-3xl font-bold lg:text-xl">
+              {title}
+            </h2>
           </Link>
+          <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
+            {summary}
+          </p>
+          <div className="w-full justify-between mt-2 flex items-center">
+            <Link href={github} target="_blank" className="w-10 md:w-6">
+              {" "}
+              <GithubIcon className={"dark:fill-light"} />
+            </Link>
+            <Link
+              href={link}
+              target="_blank"
+              className="ml-4 rounded-lg bg-dark text-light dark:bg-light dark:text-dark p-2 px-6 text-lg font-semibold md:text-base"
+            >
+              {" "}
+              Visit
+            </Link>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </>
   );
 };
 
-const Projects = () => {
+const projects = () => {
   return (
     <>
       <Head>
-        <title>Pavan | Projects Page</title>
-        <meta name="description" content="any description" />
+        <title>Pavan | Projects</title>
+        <meta name="description" content="Generated by create next app" />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
-        <Layout>
+      <Transitions />
+      <main className="w-full mb-16 flex flex-col justify-center items-center dark:text-light">
+        <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Trumps Knowlegde!"
-            className="mb-16"
+            text="Imagination Trumps Knowledge!"
+            className="mb-16 lg:!text-7xl sm:!mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <div className="grid grid-cols-12 gap-24">
+          <div className="grid grid-cols-12 gap-24 xl:gap-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-5 ">
             <div className="col-span-12">
-              <FeaturedProject
-                title="Crypto-Currency Dashboard"
-                summary="Cryptocurrency Dashboard provides information about various cryptocurrency trends and their past price through graphical visualization."
-                link="/"
-                img={project1}
-                type="Featured Project"
-                github="/"
+              <FeatureProject
+                type={"FEATURE PROJECT"}
+                title={"SNITCH"}
+                link="https://enchanting-top-coat-bear.cyclic.app/"
+                github={
+                  "https://github.com/pavandeveloperr/Snitch-Ecommerce-Website"
+                }
+                img={Project1}
+                summary="Snitch is a user-friendly ecommerce app that allows customers to easily browse and purchase products using its intuitive UI. Built on the MERN stack.With Snitch, customers can shop with confidence and convenience, all at their fingertips."
               />
             </div>
             <div className="col-span-12">
-              <FeaturedProject
-                title="Crypto-Currency Dashboard"
-                summary="Cryptocurrency Dashboard provides information about various cryptocurrency trends and their past price through graphical visualization."
-                link="/"
-                img={project1}
-                type="Featured Project"
-                github="/"
+              <FeatureProject
+                type={"FEATURE PROJECT"}
+                title={"CRYPTO-DASHBOARD"}
+                link="https://cryptocurrency-dashhboard.vercel.app/"
+                github={
+                  "https://github.com/pavandeveloperr/cryptocurrency-dashboard"
+                }
+                img={Project2}
+                summary="Cryptocurrency Dashboard is a web application that allows users to view cryptocurrency trends and their past price through graphical visualization."
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto-Currency Dashboard"
-                summary="Cryptocurrency Dashboard provides information about various cryptocurrency trends and their past price through graphical visualization."
-                link=""
-                img={project1}
-                type="Project"
-                github="/"
+                type={"PROJECT"}
+                title={"SOUNDBEATS"}
+                link="https://sound-beats.vercel.app/"
+                github={"https://github.com/pavandeveloperr/SoundBeats"}
+                img={Project3}
+                summary="SoundBeats is music web app where you can listen to your favorite songs , With a modern homepage, fully-fledged music player, search, lyrics, song exploration features, search, popular music around you, worldwide top charts, and much more ."
               />
             </div>
-            <div className="col-span-6">
+            <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto-Currency Dashboard"
-                summary="Cryptocurrency Dashboard provides information about various cryptocurrency trends and their past price through graphical visualization."
-                link=""
-                img={project1}
-                type="Project"
-                github="/"
+                type={"PROJECT"}
+                title={"GET YOUTUBE SUBSCRIBERS"}
+                link="https://youtube-subscribers.vercel.app/"
+                github={"https://github.com/pavandeveloperr/youtube-subs-alma"}
+                img={Project4}
+                summary="Youtube subscribers backend Api to get the subscribers using specific routes end point made using Node.js , Express.js and MongoDB. Project includes CRUD operations and tested the api endpoints using mocha & chai."
               />
             </div>
           </div>
@@ -177,4 +181,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default projects;

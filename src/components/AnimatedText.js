@@ -41,7 +41,7 @@ const AnimatedText = ({ text, className = "" }) => {
           return (
             <motion.span
               key={word + "-" + i}
-              className="inline-block"
+              className="inline-block dark:text-light"
               variants={singleWord}
             >
               {word}&nbsp;

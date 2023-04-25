@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { useScroll, motion } from "framer-motion";
 import LiIcon from "./LiIcon";
 
 const Details = ({ type, time, place, info }) => {
@@ -52,29 +52,27 @@ const Education = () => {
         <ul className="w-full flex flex-col items-start justify-between xs:ml-2">
           <Details
             type="Full Stack Web Development"
-            time="July 2022 - Jan 2023"
+            time="July 2022 - Jan 2023 "
             place="AlmaBetter, Bangalore"
-            info="Completed 6 months of CourseWork Certification"
+            info="Full Stack Web Development Certification"
           />
           <Details
-            type="Bachelor of Computer Applications"
-            time="2019 - 2022"
-            place="LVD College"
-            info="Raichur, karnataka, India"
+            type="Bachelor Of Computer Applications"
+            time="2019-2022"
+            place="Laxmi Venkatesh Desai College (LVD)"
+            info="Raichur, Karnataka, India"
           />
-
           <Details
             type="12th board"
             time="2017 - 2019"
             place="VidyaBharati PU College of Science"
-            info="Raichur, karnataka, India"
+            info="Raichur, Karnataka, India"
           />
-
           <Details
             type="High School"
-            time="2007 - 2017"
+            time="2017"
             place="Mother's Education Trust"
-            info="Raichur, karnataka, India"
+            info="Raichur, Karnataka, India"
           />
         </ul>
       </div>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import logo from "../../public/logo.png";
+import Image from "next/image";
 
 const MotionLink = motion(Link);
 
@@ -8,8 +10,8 @@ const Logo = () => {
   return (
     <div className="flex items-center justify-center mt-2">
       <MotionLink
-        href="/"
-        className="w-16 h-16 bg-dark border border-solid border-transparent dark:border-light text-white flex items-center justify-center rounded-full text-2xl font-bold"
+        href={"/"}
+        className="w-16 h-16 bg-current text-light flex items-center justify-center border border-solid border-transparent rounded-full text-2xl font-bold dark:border-light dark:bg-dark md:w-14 md:h-14"
         whileHover={{
           scale: 1.05,
           backgroundColor: [
@@ -23,7 +25,7 @@ const Logo = () => {
           transition: { duration: 1, repeat: Infinity },
         }}
       >
-        PK
+        <Image src={logo} alt="logo" />
       </MotionLink>
     </div>
   );
