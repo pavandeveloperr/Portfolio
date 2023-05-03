@@ -55,7 +55,7 @@ const About = () => {
                 ABOUT ME
               </h2>
               <p className="font-medium">
-                Hey there!, I am Pavan, a Full Stack Web Developer with a
+                Hey there!, I am Pavan, a Full Stack Web Developer from India with a
                 passion for creating beautiful, functional, and user-centered
                 digital experiences.I am always looking for new and innovative
                 ways to bring my clients visions to life.
