@@ -1,13 +1,13 @@
-import AnimatedText from "@/Components/AnimatedText";
-import { LinkArrow } from "@/Components/Icons";
-import Layout from "@/Components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Profilepic from "../../public/images/profile/home-image.png";
 import { RiContactsBookFill } from "react-icons/ri";
 import LightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
-import Transitions from "@/Components/Transitions";
+import { LinkArrow } from "@/components/Icons";
+import Transitions from "@/components/Transitions";
+import Layout from "@/components/Layout";
+import AnimatedText from "@/components/AnimatedText";
 
 export default function Home() {
   return (

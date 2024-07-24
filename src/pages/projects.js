@@ -1,6 +1,3 @@
-import AnimatedText from "@/Components/AnimatedText";
-import { GithubIcon } from "@/Components/Icons";
-import Layout from "@/Components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,8 +5,11 @@ import React from "react";
 import Project1 from "../../public/images/projects/ecomm.png";
 import Project3 from "../../public/images/projects/musicapp.png";
 import Project4 from "../../public/images/projects/youtubebackend.png";
-import Transitions from "@/Components/Transitions";
 import Project2 from "../../public/images/projects/crypto.png";
+import AnimatedText from "@/components/AnimatedText";
+import Transitions from "@/components/Transitions";
+import Layout from "@/components/Layout";
+import { GithubIcon } from "@/components/Icons";
 
 const FeatureProject = ({ type, title, summary, img, github, link }) => {
   return (
