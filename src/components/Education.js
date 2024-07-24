@@ -51,6 +51,12 @@ const Education = () => {
 
         <ul className="w-full flex flex-col items-start justify-between xs:ml-2">
           <Details
+            type="Junior Full Stack Developer"
+            time="June 2023 - Present"
+            place="Thinkhat Software Inc"
+            info="Hyderabad, Telangana"
+          />
+          <Details
             type="Full Stack Web Development"
             time="July 2022 - Jan 2023 "
             place="AlmaBetter, Bangalore"

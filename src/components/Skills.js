@@ -49,6 +49,7 @@ const Skills = () => {
         <Skill name="MONGODB" x="29vw" y="10vw" />
         <Skill name="NPM" x="-25vw" y="-20vw" />
         <Skill name="GIT" x="25vw" y="-20vw" />
+        <Skill name="React Native" x="25vw" y="-20vw" />
       </div>
     </>
   );
